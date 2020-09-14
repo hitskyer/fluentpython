@@ -93,6 +93,7 @@ class Vector2d:
     def __bytes__(self):
         return (bytes([ord(self.typecode)])+bytes(array(self.typecode, self)))
     def __eq__(self, other):
+        print('Vector2d::__eq__')
         return tuple(self) == tuple(other)
     def __hash__(self):
         return hash(self.x) ^ hash(self.y)
